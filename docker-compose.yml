@@ -1,0 +1,16 @@
+version: '1.0'
+
+services:
+  mongo:
+    image: mongo:latest
+    container_name: mongo-service
+    ports:
+      - "27017:27017"
+    env_file:
+      - .env
+    volumes:
+      - mongo_data:/data/db
+    restart: always
+
+volumes:
+  mongo_data:
