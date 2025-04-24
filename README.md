@@ -1,4 +1,4 @@
-# Build mongoDB container
+# Build and start MongoDB container
 ```shell
 docker compose up -d
 ```
@@ -10,7 +10,7 @@ docker exec -it mongo-service mongo --host localhost --port 27017 -u admin -p ad
 ```shell
 mongo mongodb://admin:admin123@localhost:27017
 ```
-# Verify MongoDB is running
+# Verify if MongoDB is running
 ```shell
 docker ps | grep mongo
 ```
@@ -18,19 +18,19 @@ docker ps | grep mongo
 ```shell
 docker logs mongo-service
 ```
-# Stop the container
+# Stop container
 ```shell
 docker compose down
 ```
-# Restart the container
+# Restart container
 ```shell
 docker compose restart
 ```
-# Remove the container
+# Remove container
 ```shell
 docker compose rm -f
 ```
-# Rebuild the container
+# Rebuild container
 ```shell
 docker compose build
 ```
